@@ -5,6 +5,9 @@ Changes the price of the product in the shopping cart according to its quantity
 The plugin is using i18n functions. So you can translate it to your language.
 <br/>Already translated for Persian
 
+## Plugin in wordpress core
+[See 'Wholesale' in wordpress.org](https://wordpress.org/plugins/wholesale)
+
 ## Installation
 At first download the plugin and extract it to {wp root}/wp-content/plugins
 <br/>Then active it from plugins section in wordpress dashboard
