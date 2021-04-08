@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Woocommerce Wholesale\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-05 16:23+0000\n"
+"POT-Creation-Date: 2021-04-07 23:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,41 +16,53 @@ msgstr ""
 "X-Loco-Version: 2.5.0; wp-5.6.1\n"
 "X-Domain: mjwcws"
 
-#: Backend/WCMetabox.php:43
-msgid "Amount"
-msgstr ""
-
 #. Description of the plugin
 msgid ""
 "Changes the price of the product in the shopping cart according to its "
 "quantity"
 msgstr ""
 
-#. URI of the plugin
 #. Author URI of the plugin
 msgid "http://mjkhajeh.com"
 msgstr ""
 
-#. Author of the plugin
-msgid "Mohammad Jafar Khajeh"
+#. URI of the plugin
+msgid "http://wordpress.org/plugins/wholesale"
 msgstr ""
 
-#: Backend/WCMetabox.php:37
+#. Author of the plugin
+msgid "MohammadJafar Khajeh"
+msgstr ""
+
+#: Backend/WCMetabox.php:41 Backend/WCMetabox.php:56
 msgid "Percent"
 msgstr ""
 
-#: Backend/WCMetabox.php:36
+#: Backend/WCMetabox.php:47
+msgid "Price"
+msgstr ""
+
+#: Backend/WCMetabox.php:62
+msgid "Sale price"
+msgstr ""
+
+#: Backend/WCMetabox.php:40 Backend/WCMetabox.php:55
 msgid "Specified price"
 msgstr ""
 
-#: Backend/WCMetabox.php:34
+#. Name of the plugin
+#: Backend/WCMetabox.php:28
+msgid "Wholesale"
+msgstr ""
+
+#: Backend/WCMetabox.php:33
+msgid "Wholesale minimum quantity"
+msgstr ""
+
+#: Backend/WCMetabox.php:38
 msgid "Wholesale price type"
 msgstr ""
 
-#: Backend/WCMetabox.php:29
-msgid "Wholesale quantity"
-msgstr ""
-
-#. Name of the plugin
-msgid "Woocommerce Wholesale"
+#: Backend/WCMetabox.php:53
+msgid "Wholesale sale price type"
 msgstr ""

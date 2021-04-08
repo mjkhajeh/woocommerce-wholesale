@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Woocommerce Wholesale
-Plugin URI: http://mjkhajeh.com
+Plugin Name: Wholesale
+Plugin URI: http://wordpress.org/plugins/wholesale
 Description: Changes the price of the product in the shopping cart according to its quantity
 Version: 1.0.0.0
-Author: Mohammad Jafar Khajeh
+Author: MohammadJafar Khajeh
 Author URI: http://mjkhajeh.com
 Text Domain: mjwcws
 Domain Path: /languages
@@ -28,7 +28,7 @@ class Init {
 		$this->constants();
 		$this->includes();
 
-		add_action( 'woocommerce_before_calculate_totals', array( $this, 'calculate_totals' ) );
+		add_action( 'woocommerce_before_calculate_totals', array( $this, 'calculate_cart' ) );
 	}
 
 	private function i18n() {
@@ -47,23 +47,28 @@ class Init {
 		include_once( MJWCWS_DIR . "Backend/WCMetabox.php" );
 	}
 
-	public function calculate_totals( $cart_object ) {
+	public function calculate_cart( $cart_object ) {
 		foreach( $cart_object->get_cart() as $hash => $value ) {
 			$post_id		= $value['product_id'];
 			$user_quantity	= $value['quantity'];
 			$qty			= get_post_meta( $post_id, "mjwcws_qty", true );
-			if( $qty && $user_quantity < $qty ) {
-				$price_type		= get_post_meta( $post_id, "mjwcws_price_type", true );
-				$amount			= get_post_meta( $post_id, "mjwcws_amount", true );
-				$product_price	= $value['data']->get_regular_price();
-				if( $value['data']->get_sale_price() ) {
-					$product_price = $value['data']->get_sale_price();
-				}
-				$new_price	= $product_price;
-				if( $price_type == 'percent' ) {
-					$new_price += ($amount/100)*$product_price;
+			if( !empty( $qty ) && $user_quantity >= $qty ) {
+				$regular_price	= $value['data']->get_regular_price();
+				$sale_price 	= $value['data']->get_sale_price();
+				if( empty( $sale_price ) ) { // Regular price
+					$new_price	= $regular_price;
+					$price_type	= get_post_meta( $post_id, "mjwcws_price_type", true );
+					$price		= get_post_meta( $post_id, "mjwcws_price", true );
 				} else {
-					$new_price += $amount;
+					$new_price	= $sale_price;
+					$price_type	= get_post_meta( $post_id, "mjwcws_sale_price_type", true );
+					$price		= get_post_meta( $post_id, "mjwcws_sale_price", true );
+				}
+				
+				if( $price_type == 'price' ) {
+					$new_price = $price;	
+				} else if( $price_type == 'percent' ) {
+					$new_price -= ($price/100)*$new_price;
 				}
 				$value['data']->set_price( $new_price );
 			}

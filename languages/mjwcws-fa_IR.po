@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wholesale\n"
 "POT-Creation-Date: 2020-07-28 23:33+0430\n"
-"PO-Revision-Date: 2021-04-05 16:23+0000\n"
+"PO-Revision-Date: 2021-04-07 23:59+0000\n"
 "Last-Translator: \n"
-"Language-Team: فارسی\n"
+"Language-Team: Persian\n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,42 +21,55 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: Backend/WCMetabox.php:43
-msgid "Amount"
-msgstr "مقدار"
-
 #. Description of the plugin
 msgid ""
 "Changes the price of the product in the shopping cart according to its "
 "quantity"
 msgstr "قیمت محصول را در سبد خرید با توجه به تعداد آن تغییر میدهد"
 
-#. URI of the plugin
 #. Author URI of the plugin
 #| msgid "https://mjkhajeh.ir"
 msgid "http://mjkhajeh.com"
 msgstr "http://mjkhajeh.com"
 
+#. URI of the plugin
+msgid "http://wordpress.org/plugins/wholesale"
+msgstr "http://wordpress.org/plugins/wholesale"
+
 #. Author of the plugin
-msgid "Mohammad Jafar Khajeh"
+#| msgid "Mohammad Jafar Khajeh"
+msgid "MohammadJafar Khajeh"
 msgstr "محمدجعفر خواجه"
 
-#: Backend/WCMetabox.php:37
+#: Backend/WCMetabox.php:41 Backend/WCMetabox.php:56
 msgid "Percent"
 msgstr "درصدی"
 
-#: Backend/WCMetabox.php:36
+#: Backend/WCMetabox.php:47
+msgid "Price"
+msgstr "قیمت"
+
+#: Backend/WCMetabox.php:62
+msgid "Sale price"
+msgstr "قیمت فروش ویژه"
+
+#: Backend/WCMetabox.php:40 Backend/WCMetabox.php:55
 msgid "Specified price"
 msgstr "قیمت ثابت"
 
-#: Backend/WCMetabox.php:34
-msgid "Wholesale price type"
-msgstr "نوع محاسبه قیمت فروش کمتر از عمده"
-
-#: Backend/WCMetabox.php:29
-msgid "Wholesale quantity"
-msgstr "حداقل تعداد فروش عمده"
-
 #. Name of the plugin
-msgid "Woocommerce Wholesale"
-msgstr "عمده فروشی ووکامرس"
+#: Backend/WCMetabox.php:28
+msgid "Wholesale"
+msgstr "عمده فروشی"
+
+#: Backend/WCMetabox.php:33
+msgid "Wholesale minimum quantity"
+msgstr "حداقل تعداد عمده فروشی"
+
+#: Backend/WCMetabox.php:38
+msgid "Wholesale price type"
+msgstr "نوع محاسبه قیمت فروش عمده"
+
+#: Backend/WCMetabox.php:53
+msgid "Wholesale sale price type"
+msgstr "نوع محاسبه قیمت فروش ویژه عمده"
