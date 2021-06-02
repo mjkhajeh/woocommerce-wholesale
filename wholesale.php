@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Wholesale
-Plugin URI: http://wordpress.org/plugins/wholesale
+Plugin URI: https://wordpress.org/plugins/wholesale
 Description: Changes the price of the product in the shopping cart according to its quantity
-Version: 1.0.0.0
+Version: 1.0.0.2
 Author: MohammadJafar Khajeh
 Author URI: http://mjkhajeh.com
 Text Domain: mjwcws
